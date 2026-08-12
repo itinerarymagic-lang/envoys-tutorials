@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutorial</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+</head>
+<body>
+  <main class="container">
+    <a class="back" href="index.html">&larr; All tutorials</a>
+    <h1 id="tutorial-title">Loading…</h1>
+    <div id="video-wrap"></div>
+    <article id="doc" class="doc"></article>
+  </main>
+
+  <script>
+    const id = new URLSearchParams(location.search).get('id');
+
+    fetch('content/manifest.json')
+      .then(r => r.json())
+      .then(data => {
+        let found = null;
+        data.sections.forEach(s => s.rows.forEach(row => {
+          if (row.id === id) found = row;
+        }));
+
+        if (!found) {
+          document.getElementById('tutorial-title').textContent = 'Tutorial not found';
+          return;
+        }
+
+        document.getElementById('tutorial-title').textContent = found.title;
+        document.title = found.title;
+
+        const wrap = document.getElementById('video-wrap');
+        if (found.video) {
+          wrap.innerHTML =
+            '<div class="video"><iframe src="' + found.video +
+            '" frameborder="0" allowfullscreen allow="autoplay; fullscreen; picture-in-picture"></iframe></div>';
+        } else {
+          wrap.innerHTML = '<p class="coming-soon">Video coming soon.</p>';
+        }
+
+        return fetch('content/docs/' + id + '.md')
+          .then(r => r.ok ? r.text() : '')
+          .then(md => {
+            if (md) document.getElementById('doc').innerHTML = marked.parse(md);
+          });
+      })
+      .catch(() => {
+        document.getElementById('tutorial-title').textContent = 'Could not load content';
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "site": {
+    "title": "AIRTABLE ENVOYS",
+    "intro": "Video tutorials and documentation for the ENVOYS Airtable app. Click any row to watch the video and read the guide."
+  },
+  "sections": [
+    {
+      "name": "BASICS",
+      "rows": [
+        {
+          "id": "what-is-a-database",
+          "title": "What is a Database?",
+          "video": ""
+        },
+        {
+          "id": "logic-behind-our-data",
+          "title": "Logic behind our data",
+          "video": ""
+        }
+      ]
+    },
+    {
+      "name": "EM",
+      "rows": [
+        {
+          "id": "school-profiles",
+          "title": "School Profiles",
+          "video": ""
+        }
+      ]
+    }
+  ]
+}
