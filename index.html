@@ -16,7 +16,7 @@
   </main>
 
   <script>
-    fetch('content/manifest.json')
+    fetch('content/manifest.json?v=' + Date.now())
       .then(r => r.json())
       .then(data => {
         document.getElementById('site-title').textContent = data.site.title;
