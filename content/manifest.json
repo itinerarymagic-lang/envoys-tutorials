@@ -1,44 +1,44 @@
 {
-  "site": {
-    "title": "AIRTABLE ENVOYS",
-    "intro": "Video tutorials and documentation for the ENVOYS Airtable app. Click any row to watch the video and read the guide."
-  },
-  "sections": [
-    {
-      "name": "BASICS",
-      "rows": [
-        {
-          "id": "why-airtable",
-          "title": "Why Airtable?",
-          "video": "https://drive.google.com/file/d/1HnCA9l3VPn7jdg6Sr_e9Jj9vabO1sL49/preview",
-          "slides": "https://docs.google.com/presentation/d/1TwbmEJkpR4ifxZyCIXjdeVnc-bhCxUONkYEVC9t6_o4/embed?start=false&loop=false"
-        },
-        {
-          "id": "data-vs-interfaces",
-          "title": "Where do we work? Data vs Interfaces",
-          "video": "https://drive.google.com/file/d/1bynMyr7Qib2tXarHjjG7ABGRESeCDrcI/preview"
-        },
-        {
-          "id": "what-is-a-database",
-          "title": "What is a Database?",
-          "video": ""
-        },
-        {
-          "id": "logic-behind-our-data",
-          "title": "Logic behind our data",
-          "video": ""
-        }
-      ]
+    "site": {
+          "title": "AIRTABLE ENVOYS",
+          "intro": "Video tutorials and documentation for the ENVOYS Airtable app. Click any row to watch the video and read the guide."
     },
-    {
-      "name": "EM",
-      "rows": [
-        {
-          "id": "school-profiles",
-          "title": "School Profiles",
-          "video": ""
-        }
-      ]
-    }
-  ]
+    "sections": [
+          {
+                  "name": "BASICS",
+                  "rows": [
+                            {
+                                        "id": "why-airtable",
+                                        "title": "Why Airtable?",
+                                        "video": "https://drive.google.com/file/d/1HnCA9l3VPn7jdg6Sr_e9Jj9vabO1sL49/preview",
+                                        "slides": "https://docs.google.com/presentation/d/1TwbmEJkpR4ifxZyCIXjdeVnc-bhCxUONkYEVC9t6_o4/embed?start=false&loop=false"
+                            },
+                            {
+                                        "id": "data-vs-interfaces",
+                                        "title": "Where do we work? Data vs Interfaces",
+                                        "video": "https://drive.google.com/file/d/1bynMyr7Qib2tXarHjjG7ABGRESeCDrcI/preview"
+                            },
+                            {
+                                        "id": "what-is-a-database",
+                                        "title": "What is a Database?",
+                                        "video": ""
+                            },
+                            {
+                                        "id": "logic-behind-our-data",
+                                        "title": "Logic behind our data",
+                                        "video": ""
+                            }
+                  ]
+          },
+          {
+                  "name": "EM",
+                  "rows": [
+                            {
+                                        "id": "school-profiles",
+                                        "title": "School Profiles",
+                                        "video": ""
+                            }
+                  ]
+          }
+    ]
 }
