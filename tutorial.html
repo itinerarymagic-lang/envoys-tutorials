@@ -43,6 +43,12 @@
           wrap.innerHTML = '<p class="coming-soon">Video coming soon.</p>';
         }
 
+        if (found.slides) {
+          wrap.innerHTML +=
+            '<div class="video"><iframe src="' + found.slides +
+            '" frameborder="0" allowfullscreen></iframe></div>';
+        }
+
         return fetch('content/docs/' + id + '.md')
           .then(r => r.ok ? r.text() : '')
           .then(md => {
