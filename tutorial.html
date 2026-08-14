@@ -52,7 +52,7 @@
         return fetch('content/docs/' + id + '.md')
           .then(r => r.ok ? r.text() : '')
           .then(md => {
-            if (md) document.getElementById('doc').innerHTML = marked.parse(md);
+            if (md) document.getElementById('doc').innerHTML = marked.parse(md, { breaks: true });
           });
       })
       .catch(() => {
