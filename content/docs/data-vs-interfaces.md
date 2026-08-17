@@ -234,8 +234,8 @@ The centre of the base. Every confirmed program lives here, and almost every oth
 | OPS QC Checks | Link → OPS QC Checks | The OPS quality-control checklist record. |
 | OPS QC Checks Status | Lookup | Overall OPS QC status. |
 | Program Meetings | Link → Program Meetings | Meetings scheduled for this program. |
-| Program Documents | Link → **Program Dashboard** | ⚠️ Despite the name, links to the Program Dashboard table (school-facing resources). |
-| Program Dashboard | Link → **Program Documents** | ⚠️ Despite the name, links to the Program Documents table (internal documents). |
+| Program Documents | Link → **Program Dashboard** |
+| Program Dashboard | Link → **Program Documents** | 
 | School's Directory Contacts | Link → School Faculty & Staff Directory | School-side contacts for this program. |
 | Vendor Payments | Link → Vendor Payments | Payment requests raised against this program. |
 | School Invoices | Link → Invoices | Invoices issued to the school. |
@@ -1664,7 +1664,6 @@ Meetings scheduled around a program. All meetings are planned in Eastern Time.
 
 Resources published to the school-facing program dashboard. **Previously called "Program Documents"** — the table ID hasn't changed, so existing scripts still work.
 
-> ⚠️ On the Programs table, the link back to here is the field named **"Program Documents"**, not the one named "Program Dashboard".
 
 | Field | Type | What it's for |
 |---|---|---|
