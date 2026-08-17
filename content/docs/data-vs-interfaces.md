@@ -1522,8 +1522,6 @@ The Experience Management quality-control checklist — one record per program. 
 
 # 29. OPS QC Checks
 
-The Operations quality-control checklist — one record per program, grouped by booking category. Nearly every check is a single select. "FPF" means Field Program Folder; "HBH" means the Hour-By-Hour itinerary.
-
 ## Header
 
 | Field | Type | What it's for |
