@@ -1,29 +1,48 @@
 {
-      "site": {
-              "title": "AIRTABLE ENVOYS",
-              "intro": "Access video tutorials and documentation for the new ENVOYS system below. Click any row to open the corresponding section guide. This section also introduces, explains, and displays ticket system responses for all new features."
-      },
-      "sections": [
-              {
-                        "name": "BASICS",
-                        "rows": [
-                                    {
-                                                  "id": "why-airtable",
-                                                  "title": "Why Airtable?",
-                                                  "video": "https://drive.google.com/file/d/1HnCA9l3VPn7jdg6Sr_e9Jj9vabO1sL49/preview",
-                                                  "slides": "https://docs.google.com/presentation/d/1TwbmEJkpR4ifxZyCIXjdeVnc-bhCxUONkYEVC9t6_o4/embed?start=false&loop=false"
-                                    },
-                                    {
-                                                  "id": "data-vs-interfaces",
-                                                  "title": "Where do we work? Data vs Interfaces",
-                                                  "video": "https://drive.google.com/file/d/1bynMyr7Qib2tXarHjjG7ABGRESeCDrcI/preview"
-                                    },
-                                    {
-                                                  "id": "tech-ticket-system",
-                                                  "title": "What is the Tech ticket system?",
-                                                  "video": "https://drive.google.com/file/d/1i0ALWMIA6lKWOgMuZZ4nxEShG8UnhNWO/preview"
-                                    }
-                        ]
-              }
+  "site": {
+    "title": "AIRTABLE ENVOYS",
+    "intro": "Access video tutorials and documentation for the new ENVOYS system below. Click any row to open the corresponding section guide. This section also introduces, explains, and displays ticket system responses for all new features."
+  },
+  "sections": [
+    {
+      "name": "BASICS",
+      "rows": [
+        {
+          "id": "why-airtable",
+          "title": "Why Airtable?",
+          "video": "https://drive.google.com/file/d/1HnCA9l3VPn7jdg6Sr_e9Jj9vabO1sL49/preview",
+          "slides": "https://docs.google.com/presentation/d/1TwbmEJkpR4ifxZyCIXjdeVnc-bhCxUONkYEVC9t6_o4/embed?start=false&loop=false"
+        },
+        {
+          "id": "data-vs-interfaces",
+          "title": "Where do we work? Data vs Interfaces",
+          "video": "https://drive.google.com/file/d/1bynMyr7Qib2tXarHjjG7ABGRESeCDrcI/preview"
+        },
+        {
+          "id": "tech-ticket-system",
+          "title": "What is the Tech ticket system?",
+          "video": "https://drive.google.com/file/d/1i0ALWMIA6lKWOgMuZZ4nxEShG8UnhNWO/preview"
+        }
       ]
+    },
+    {
+      "name": "OPS",
+      "rows": [
+        {
+          "id": "itinerary-budget-triggers",
+          "title": "Itinerary & Budget Triggers",
+          "videos": [
+            {
+              "label": "Part 1",
+              "url": "https://drive.google.com/file/d/1CZ_ylXaCtAumhYqB89UT1HZIFdbzgey5/preview"
+            },
+            {
+              "label": "Part 2",
+              "url": "https://drive.google.com/file/d/10mr90Mj07ljS9YCjh5AFEMUBTV0R44JW/preview"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
