@@ -18,6 +18,11 @@
   <script>
     const id = new URLSearchParams(location.search).get('id');
 
+    function embed(url) {
+      return '<div class="video"><iframe src="' + url +
+        '" frameborder="0" allowfullscreen allow="autoplay; fullscreen; picture-in-picture"></iframe></div>';
+    }
+
     fetch('content/manifest.json?v=' + Date.now())
       .then(r => r.json())
       .then(data => {
@@ -35,18 +40,27 @@
         document.title = found.title;
 
         const wrap = document.getElementById('video-wrap');
-        if (found.video) {
-          wrap.innerHTML =
-            '<div class="video"><iframe src="' + found.video +
-            '" frameborder="0" allowfullscreen allow="autoplay; fullscreen; picture-in-picture"></iframe></div>';
+
+        // Build the list of videos. Supports either a single "video" string
+        // or a "videos" array of strings / { label, url } objects.
+        let clips = [];
+        if (Array.isArray(found.videos)) {
+          clips = found.videos.map(v => typeof v === 'string' ? { url: v } : v);
+        } else if (found.video) {
+          clips = [{ url: found.video }];
+        }
+
+        if (clips.length) {
+          wrap.innerHTML = clips.map(clip => {
+            const label = clip.label ? '<p class="video-label">' + clip.label + '</p>' : '';
+            return label + embed(clip.url);
+          }).join('');
         } else {
           wrap.innerHTML = '<p class="coming-soon">Video coming soon.</p>';
         }
 
         if (found.slides) {
-          wrap.innerHTML +=
-            '<div class="video"><iframe src="' + found.slides +
-            '" frameborder="0" allowfullscreen></iframe></div>';
+          wrap.innerHTML += embed(found.slides);
         }
 
         return fetch('content/docs/' + id + '.md?v=' + Date.now())

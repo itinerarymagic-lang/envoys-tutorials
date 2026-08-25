@@ -121,3 +121,14 @@ h1 {
     font-size: 1rem;
 }
 .doc th { font-weight: 600; }
+
+.video-label {
+    margin: 24px 0 0;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #8a8a8e;
+}
+
+.video-label + .video { margin-top: 8px; }
