@@ -42,16 +42,6 @@ Keep these in mind during testing next week. If something you need is missing, s
 
 ---
 
-## The New Reconciliation App
-
-Everything lives in one place now, instead of split across tools. Login links are available in your ENVOYS HQ Profile.
-
-## I&B Requests
-
-Mostly relevant to other teams — it surfaces Itinerary & Budget request information across the system.
-
----
-
 ## Record Details: Keeping Things Organized
 
 A few rules of thumb for how tables and records stay usable as the system grows:
@@ -67,7 +57,7 @@ Filling out linked fields matters more here than in other systems you've used. T
 
 ### Source of Truth (SOT)
 
-Some information needs to look different depending on who's viewing it — which means more than one field for what feels like "the same" data. For example, Operations may work from an HBH view, Enrollment Management from a separate SOT field, and another field tracks Registered Participants. These aren't duplicates — each serves a different audience.
+Some information needs to look different depending on who's viewing it — which means more than one field for what feels like "the same" data. For example, Operations may work from an HBH view which needs difFerent values for participants, another field tracks actual Registered Participants that have filled out the Jotform, and EM records what is expected, the SOT. These aren't duplicates — each serves a different audience and purpose. 
 
 ### When a Field Needs Its Own Table
 
@@ -83,17 +73,8 @@ Buttons on a record or interface can open another interface, run an automation, 
 
 ## Action Item: Update Your Profiles
 
-Please update your **ENVOYS HQ Profile** and **Field Staff Profile**. This also doubles as a quick attention check — everyone who does it gets a coffee, on MG & Allan.
+Please update your **ENVOYS HQ Profile** and **Field Staff Profile**. 
 
----
-
-## Itinerary & Budgets (I&B)
-
-This process has been running since last season and already works well, so it's a useful preview of how the rest of these tutorials will eventually look. Not mandatory to review now, but worth it.
-
-**The flow:** I&B Creation → Hubspot → I&B Sheet → Sent to PT → Approved → Migrating a Program.
-
-Cross-over points like this one deserve extra attention to detail — most records are created here, and a mistake at this stage can mean significant rework.
 
 **Operational stage notes:**
 
@@ -107,25 +88,6 @@ School HBH and Field Staff HBH views are still pending. A few solid options are 
 
 **Payment Tracker** is a good example of using another team's interface to find an answer yourself, instead of waiting on someone who's OOO.
 
----
-
-## Program Dashboard (EM)
-
-An example of automation and system design working together: we identify the essential elements every dashboard needs, template them to cut down manual entry, and keep the template flexible enough for one-off additions.
-
-- **Flights** is called out as an area with a lot of potential — we haven't yet looped in NB on this, so for now we're using her existing system. It'll be incorporated and optimized later.
-- Some **new additions don't exist in the old App yet** (registration is one example) — expect some initial friction while the team adjusts.
-- **Invoices look different by team.** Fields act as control elements — for example, the Invoice Payment Status field determines whether an invoice is even visible in the Finance interface.
-- **QC Tracker** is an example of pulling elements out of individual teams' "Supreme" sheets and into the global system — no more manually updating a program in two places, which reduces mistakes and keeps things consistent.
-- There are **two ways to visualize an interface**: the legacy Google Sheets-style layout, or a custom view built around the actual workflow. Both exist today, and more flexibility is coming as we move toward Softr and a fully custom front end (the Reconciliation App).
-
----
-
-## S&R Interfaces
-
-Same idea as above — Supreme sheets can be brought in, and both the legacy and new custom views are available. Also shown: the **Staff Profile Form**.
-
----
 
 ## Wrap-Up
 
