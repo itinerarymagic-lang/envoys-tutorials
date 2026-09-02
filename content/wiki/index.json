@@ -1,0 +1,135 @@
+{
+  "title": "System Wiki — Live Schema",
+  "intro": "Field-level documentation for every table in the ENVOYS | V.0 Airtable base. Choose a table from the list to see what each of its fields is for.",
+  "updated": "September 2, 2026",
+  "tables": [
+    {
+      "id": "i-and-b-requests",
+      "title": "I&B Requests"
+    },
+    {
+      "id": "i-and-b-pricing-tier",
+      "title": "I&B Pricing Tier"
+    },
+    {
+      "id": "programs",
+      "title": "Programs"
+    },
+    {
+      "id": "program-pricing-tiers",
+      "title": "Program Pricing Tiers"
+    },
+    {
+      "id": "associated-costs",
+      "title": "Associated Costs"
+    },
+    {
+      "id": "program-versions",
+      "title": "Program Versions"
+    },
+    {
+      "id": "invoices",
+      "title": "Invoices"
+    },
+    {
+      "id": "reconciliation-accounts",
+      "title": "Reconciliation Accounts"
+    },
+    {
+      "id": "hbh-days",
+      "title": "HBH Days"
+    },
+    {
+      "id": "hbh-blocks",
+      "title": "HBH Blocks"
+    },
+    {
+      "id": "hbh-categories",
+      "title": "HBH Categories"
+    },
+    {
+      "id": "currencies",
+      "title": "Currencies"
+    },
+    {
+      "id": "destinations",
+      "title": "Destinations"
+    },
+    {
+      "id": "countries",
+      "title": "Countries"
+    },
+    {
+      "id": "locations",
+      "title": "Locations"
+    },
+    {
+      "id": "vendors",
+      "title": "Vendors"
+    },
+    {
+      "id": "vendor-listings",
+      "title": "Vendor Listings"
+    },
+    {
+      "id": "schools",
+      "title": "Schools"
+    },
+    {
+      "id": "school-faculty-and-staff-directory",
+      "title": "School Faculty & Staff Directory"
+    },
+    {
+      "id": "school-participant-profiles",
+      "title": "School Participant Profiles"
+    },
+    {
+      "id": "envoys-hq",
+      "title": "ENVOYS HQ"
+    },
+    {
+      "id": "field-staff-profiles",
+      "title": "Field Staff Profiles"
+    },
+    {
+      "id": "program-field-staff-assignments",
+      "title": "Program Field Staff Assignments"
+    },
+    {
+      "id": "em-qc-checks",
+      "title": "EM QC Checks"
+    },
+    {
+      "id": "ops-qc-checks",
+      "title": "OPS QC Checks"
+    },
+    {
+      "id": "program-meetings",
+      "title": "Program Meetings"
+    },
+    {
+      "id": "program-dashboard",
+      "title": "Program Dashboard"
+    },
+    {
+      "id": "program-documents",
+      "title": "Program Documents"
+    },
+    {
+      "id": "statements",
+      "title": "Statements"
+    },
+    {
+      "id": "transactions",
+      "title": "Transactions"
+    },
+    {
+      "id": "allocations",
+      "title": "Allocations"
+    },
+    {
+      "id": "vendor-payments",
+      "title": "Vendor Payments"
+    }
+  ]
+}
