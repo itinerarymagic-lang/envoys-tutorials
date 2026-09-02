@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>System Wiki — Live Schema</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+</head>
+<body>
+  <div class="wiki-page">
+    <a class="back" href="index.html">&larr; All tutorials</a>
+
+    <header class="wiki-header">
+      <h1 id="wiki-title">Loading…</h1>
+      <p id="wiki-intro"></p>
+      <p id="wiki-updated" class="wiki-updated"></p>
+    </header>
+
+    <div class="wiki-layout">
+      <nav class="wiki-sidebar" id="wiki-sidebar">
+        <p class="subheader">Tables</p>
+        <input id="wiki-filter" class="wiki-filter" type="search"
+               placeholder="Filter tables…" autocomplete="off">
+        <div class="wiki-nav" id="wiki-nav"></div>
+      </nav>
+
+      <article class="doc wiki-doc" id="wiki-doc">
+        <p class="coming-soon">Pick a table on the left.</p>
+      </article>
+    </div>
+  </div>
+
+  <script>
+    const nav    = document.getElementById('wiki-nav');
+    const doc    = document.getElementById('wiki-doc');
+    const filter = document.getElementById('wiki-filter');
+
+    let tables = [];
+
+    // Load one table's markdown into the main pane.
+    function showTable(id) {
+      const entry = tables.find(t => t.id === id);
+      if (!entry) return;
+
+      document.title = entry.title + ' — System Wiki';
+
+      // highlight the active item in the sidebar and keep it visible
+      nav.querySelectorAll('a').forEach(a => {
+        const on = a.dataset.id === id;
+        a.classList.toggle('active', on);
+        if (on && a.scrollIntoView) {
+          a.scrollIntoView({ block: 'nearest' });
+        }
+      });
+
+      doc.innerHTML = '<p class="coming-soon">Loading…</p>';
+
+      fetch('content/wiki/' + id + '.md?v=' + Date.now())
+        .then(r => r.ok ? r.text() : Promise.reject())
+        .then(md => {
+          doc.innerHTML = marked.parse(md, { breaks: true });
+
+          // Field tables are wide. Put each one in its own scrollable box so
+          // narrow screens scroll the table sideways, not the whole page.
+          doc.querySelectorAll('table').forEach(t => {
+            const box = document.createElement('div');
+            box.className = 'table-scroll';
+            t.parentNode.insertBefore(box, t);
+            box.appendChild(t);
+          });
+
+          window.scrollTo(0, 0);
+        })
+        .catch(() => {
+          doc.innerHTML = '<p class="coming-soon">Could not load this table.</p>';
+        });
+    }
+
+    function routeFromHash() {
+      const id = decodeURIComponent((location.hash || '').replace(/^#/, ''));
+      if (id && tables.some(t => t.id === id)) {
+        showTable(id);
+      } else if (tables.length) {
+        showTable(tables[0].id);
+      }
+    }
+
+    fetch('content/wiki/index.json?v=' + Date.now())
+      .then(r => r.json())
+      .then(data => {
+        document.getElementById('wiki-title').textContent = data.title;
+        document.getElementById('wiki-intro').textContent = data.intro;
+        document.getElementById('wiki-updated').textContent =
+          data.updated ? 'Updated ' + data.updated : '';
+
+        tables = data.tables || [];
+
+        tables.forEach(t => {
+          const a = document.createElement('a');
+          a.className = 'wiki-nav-item';
+          a.href = '#' + encodeURIComponent(t.id);
+          a.dataset.id = t.id;
+          a.textContent = t.title;
+          nav.appendChild(a);
+        });
+
+        routeFromHash();
+      })
+      .catch(() => {
+        document.getElementById('wiki-title').textContent = 'Could not load content';
+        document.getElementById('wiki-intro').textContent =
+          'Check that content/wiki/index.json exists and is valid JSON.';
+      });
+
+    window.addEventListener('hashchange', routeFromHash);
+
+    // Sidebar filter box — hides items that don't match what you type.
+    filter.addEventListener('input', () => {
+      const q = filter.value.trim().toLowerCase();
+      nav.querySelectorAll('a').forEach(a => {
+        a.style.display = a.textContent.toLowerCase().includes(q) ? '' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>

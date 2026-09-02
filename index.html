@@ -32,13 +32,28 @@
 
           const list = document.createElement('div');
           list.className = 'rows';
-          section.rows.forEach(row => {
-            const a = document.createElement('a');
-            a.className = 'row';
-            a.href = 'tutorial.html?id=' + encodeURIComponent(row.id);
-            a.textContent = row.title;
-            list.appendChild(a);
-          });
+
+          const rows = section.rows || [];
+
+          // A section marked "coming-soon" (or with no rows yet) shows a
+          // plain, unclickable placeholder label instead of links.
+          if (section.status === 'coming-soon' || rows.length === 0) {
+            const label = document.createElement('div');
+            label.className = 'row row-disabled';
+            label.textContent = 'COMING SOON';
+            list.appendChild(label);
+          } else {
+            rows.forEach(row => {
+              const a = document.createElement('a');
+              a.className = 'row';
+              // A row can point at its own page via "href"; otherwise it opens
+              // the standard tutorial page for its id.
+              a.href = row.href || ('tutorial.html?id=' + encodeURIComponent(row.id));
+              a.textContent = row.title;
+              list.appendChild(a);
+            });
+          }
+
           container.appendChild(list);
         });
       })

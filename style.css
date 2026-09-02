@@ -50,6 +50,17 @@ h1 {
 
 .row:hover { background: #eef2ff; color: #2f4bd6; }
 
+/* Placeholder label for sections with no tutorials yet. Not a link. */
+.row-disabled {
+    color: #a6a6ab;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    cursor: default;
+}
+
+.row-disabled:hover { background: none; color: #a6a6ab; }
+
 .back {
     display: inline-block;
     margin-bottom: 24px;
@@ -132,3 +143,109 @@ h1 {
 }
 
 .video-label + .video { margin-top: 8px; }
+
+/* ---------------------------------------------------------------
+   System Wiki — Live Schema
+   Wider page: table list on the left, the selected table on the right.
+   --------------------------------------------------------------- */
+
+.wiki-page {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+}
+
+.wiki-header { margin-bottom: 8px; }
+.wiki-header p { color: #555; margin: 0 0 4px; }
+
+.wiki-updated {
+    font-size: 0.85rem;
+    color: #8a8a8e;
+}
+
+.wiki-layout {
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr);
+    gap: 40px;
+    align-items: start;
+}
+
+.wiki-sidebar {
+    position: sticky;
+    top: 24px;
+    max-height: calc(100vh - 48px);
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.wiki-sidebar .subheader { margin-top: 32px; }
+
+.wiki-filter {
+    width: 100%;
+    margin: 10px 0 8px;
+    padding: 7px 10px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: #1d1d1f;
+    background: #fff;
+    border: 1px solid #e5e5e7;
+    border-radius: 6px;
+}
+
+.wiki-filter:focus {
+    outline: none;
+    border-color: #2f4bd6;
+}
+
+.wiki-nav {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding-right: 4px;
+}
+
+.wiki-nav-item {
+    display: block;
+    padding: 7px 10px;
+    font-size: 0.95rem;
+    color: #1d1d1f;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.15s;
+}
+
+.wiki-nav-item:hover { background: #eef2ff; color: #2f4bd6; }
+
+.wiki-nav-item.active {
+    background: #eef2ff;
+    color: #2f4bd6;
+    font-weight: 600;
+}
+
+.wiki-doc { min-width: 0; }
+.wiki-doc > h1:first-child { margin-top: 32px; }
+
+/* Wide field tables scroll inside their own box. */
+.table-scroll {
+    overflow-x: auto;
+    margin: 16px 0 24px;
+}
+
+.table-scroll table { margin: 0; }
+
+@media (max-width: 800px) {
+    .wiki-layout {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .wiki-sidebar {
+        position: static;
+        max-height: none;
+    }
+
+    .wiki-nav { max-height: 260px; }
+
+    .table-scroll table { min-width: 560px; }
+}
