@@ -31,7 +31,7 @@ It is dynamic, meaning it will adapt certain elements based on connected inputs 
 
 ## Migration: From I&B to Airtable
 
-When the proposal is approved, the I&B is migrated into Airtable. This is the exact moment the I&B **stops** being the source of truth and the **Program** takes over. Although we loose certain degree of freedom from Google Sheets file type, we optimize for many other tasks.
+When the proposal is approved, the I&B is migrated into Airtable. This is the exact moment the I&B **stops** being the source of truth and the **Program** takes over. Although we lose a certain degree of freedom from Google Sheets file type, we optimize for many other tasks.
 
 After migration, changes you make in the Sheet do **not** reach Airtable. From here on, the itinerary lives in the Program.
 
@@ -47,7 +47,7 @@ A **Version** is one set of the program's elements, kept for a specific purpose.
 |---|---|---|---|
 | **Budget** | The photo | What did we plan to spend when we sold the program? | Nobody. It stays frozen. |
 | **Quote** | The live plan | What do we expect to spend, and what we actually will spend with real bookings and real vendor prices? Even after modifications to our itinerary! | **OPS. This is where you work.** |
-| **Execution** | The receipt | What did we actually spent out of our accounts from our credit cards and banks? | Created at Closing, from reconciled expenses. |
+| **Execution** | The receipt | What did we actually spend out of our accounts from our credit cards and banks? | Created at Closing, from reconciled expenses. |
 
 ### The Version record is tiny
 
@@ -59,7 +59,7 @@ In the **Program Versions** table, each record only holds:
 - Number of **Faculty**
 - Number of **Staff**
 
-Every **HBH Blocks (costs inside in our itinerary) and every Associated Costs (costs outside of our itinerary)** are linked to **exactly one** version. That's how each version can have its own participant numbers. You can change the Quote version's numbers without touching the Budget (see *Two sets of participant numbers* below).
+Every **HBH Blocks (costs inside our itinerary) and every Associated Costs (costs outside of our itinerary)** are linked to **exactly one** version. That's how each version can have its own participant numbers. You can change the Quote version's numbers without touching the Budget (see *Two sets of participant numbers* below).
 
 [![How the tables connect: Program, Versions, HBH Blocks, Associated Costs, HBH Days](content/img/migration/03-how-tables-connect.svg)](content/img/migration/03-how-tables-connect.svg)
 
@@ -177,7 +177,7 @@ A Program has two kinds of participant numbers, and they are **not** linked on p
 | | SOT numbers | Version numbers |
 |---|---|---|
 | Where they live | On the Program record | On each Program Version record |
-| What they mean | How many people EM actually expect | How many people this version is priced for and used to calculate Forecast fields |
+| What they mean | How many people EM actually expects | How many people this version is priced for and used to calculate Forecast fields |
 | Do HBH costs use them? | No | **Yes**. Every HBH total is calculated from its version's numbers. |
 
 **Why keep them separate?** So OPS can play with the numbers without breaking anyone else's work.
@@ -282,7 +282,7 @@ Now each category can be compared across all three versions:
 No. Per Student and Per Person lines follow the version's numbers. Per Group lines, and Per Adult lines when the adult count hasn't changed, stay the same.
 
 **The school changed the itinerary. Where do I make the change?**
-In the **Quote** version's HBH, which is what you have access to in the HBH Operational Stage Interface, don't worry about the rest as it is protected!. Never in the in the I&B Sheet, because the Sheet stopped being the source of truth at migration.
+In the **Quote** version's HBH, which is what you have access to in the HBH Operational Stage Interface, don't worry about the rest as it is protected! Never in the I&B Sheet, because the Sheet stopped being the source of truth at migration.
 
 **I typed the Local Amount but Quoted Total Cost USD is still the old number.**
 That's expected. Copy the value from **Local Amount to USD** into **Quoted Total Cost USD** yourself.
