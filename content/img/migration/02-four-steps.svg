@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="520" viewBox="0 0 760 520" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8a8a8e"/>
+    </marker>
+  </defs>
+  <rect x="0.5" y="0.5" width="759" height="519" rx="12" fill="#ffffff" stroke="#e5e5e7"/>
+  <text x="20" y="32" font-size="15" font-weight="700" fill="#1d1d1f">The 4 migration steps: click in order, one at a time</text>
+
+  <!-- connector between step circles -->
+  <line x1="44" y1="80" x2="44" y2="410" stroke="#d0d0d4" stroke-width="2"/>
+
+  <!-- ============ STEP 1 ============ -->
+  <circle cx="44" cy="80" r="16" fill="#1d1d1f"/>
+  <text x="44" y="85" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+  <text x="74" y="78" font-size="15" font-weight="700" fill="#1d1d1f">Program + Versions</text>
+  <text x="74" y="98" font-size="12.5" fill="#555">Creates the Program record and</text>
+  <text x="74" y="115" font-size="12.5" fill="#555">the Budget and Quote Versions.</text>
+  <text x="74" y="132" font-size="12.5" fill="#555">No HBH yet: versions are empty.</text>
+
+  <rect x="340" y="62" width="120" height="66" rx="8" fill="#f5f5f7" stroke="#c7c7cc"/>
+  <text x="400" y="88" font-size="13.5" font-weight="700" fill="#1d1d1f" text-anchor="middle">Program</text>
+  <text x="400" y="106" font-size="11" fill="#6e6e73" text-anchor="middle">pods, flights,</text>
+  <text x="400" y="120" font-size="11" fill="#6e6e73" text-anchor="middle">booking, payments</text>
+  <line x1="464" y1="95" x2="484" y2="95" stroke="#8a8a8e" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="488" y="62" width="120" height="66" rx="8" fill="#eef1f5" stroke="#5b6b82" stroke-dasharray="5 4"/>
+  <text x="548" y="90" font-size="13.5" font-weight="700" fill="#3f4b5c" text-anchor="middle">Budget</text>
+  <text x="548" y="110" font-size="11.5" font-style="italic" fill="#6e6e73" text-anchor="middle">empty</text>
+  <rect x="620" y="62" width="120" height="66" rx="8" fill="#eef2ff" stroke="#2f4bd6" stroke-dasharray="5 4"/>
+  <text x="680" y="90" font-size="13.5" font-weight="700" fill="#2f4bd6" text-anchor="middle">Quote</text>
+  <text x="680" y="110" font-size="11.5" font-style="italic" fill="#6e6e73" text-anchor="middle">empty</text>
+
+  <line x1="20" y1="156" x2="740" y2="156" stroke="#f0f0f2"/>
+
+  <!-- ============ STEP 2 ============ -->
+  <circle cx="44" cy="190" r="16" fill="#1d1d1f"/>
+  <text x="44" y="195" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+  <text x="74" y="188" font-size="15" font-weight="700" fill="#1d1d1f">HBH Days</text>
+  <text x="74" y="208" font-size="12.5" fill="#555">Uses the Program's dates to create</text>
+  <text x="74" y="225" font-size="12.5" fill="#555">one record per day: day number</text>
+  <text x="74" y="242" font-size="12.5" fill="#555">and date.</text>
+
+  <g font-size="12.5" text-anchor="middle">
+    <rect x="340" y="176" width="72" height="50" rx="8" fill="#f5f5f7" stroke="#c7c7cc"/>
+    <text x="376" y="197" font-weight="700" fill="#1d1d1f">Day 1</text>
+    <text x="376" y="215" font-size="11" fill="#6e6e73">Mon Feb 22</text>
+    <rect x="422" y="176" width="72" height="50" rx="8" fill="#f5f5f7" stroke="#c7c7cc"/>
+    <text x="458" y="197" font-weight="700" fill="#1d1d1f">Day 2</text>
+    <text x="458" y="215" font-size="11" fill="#6e6e73">Tue Feb 23</text>
+    <rect x="504" y="176" width="72" height="50" rx="8" fill="#f5f5f7" stroke="#c7c7cc"/>
+    <text x="540" y="197" font-weight="700" fill="#1d1d1f">Day 3</text>
+    <text x="540" y="215" font-size="11" fill="#6e6e73">Wed Feb 24</text>
+    <rect x="586" y="176" width="72" height="50" rx="8" fill="#f5f5f7" stroke="#c7c7cc"/>
+    <text x="622" y="197" font-weight="700" fill="#1d1d1f">Day 4</text>
+    <text x="622" y="215" font-size="11" fill="#6e6e73">Thu Feb 25</text>
+    <rect x="668" y="176" width="72" height="50" rx="8" fill="#f5f5f7" stroke="#c7c7cc"/>
+    <text x="704" y="197" font-weight="700" fill="#1d1d1f">Day 5</text>
+    <text x="704" y="215" font-size="11" fill="#6e6e73">Fri Feb 26</text>
+  </g>
+
+  <line x1="20" y1="266" x2="740" y2="266" stroke="#f0f0f2"/>
+
+  <!-- ============ STEP 3 ============ -->
+  <circle cx="44" cy="300" r="16" fill="#1d1d1f"/>
+  <text x="44" y="305" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+  <text x="74" y="298" font-size="15" font-weight="700" fill="#1d1d1f">HBH Blocks, twice</text>
+  <text x="74" y="318" font-size="12.5" fill="#555">1st: copies the I&amp;B into the Budget.</text>
+  <text x="74" y="335" font-size="12.5" fill="#555">2nd: duplicates it into the Quote.</text>
+  <text x="74" y="352" font-size="12.5" fill="#555">Identical today, different later.</text>
+
+  <rect x="340" y="298" width="76" height="34" rx="8" fill="#fff6e6" stroke="#e0a84a"/>
+  <text x="378" y="320" font-size="12" font-weight="600" fill="#8a5a00" text-anchor="middle">I&amp;B HBH</text>
+  <line x1="420" y1="315" x2="452" y2="315" stroke="#8a8a8e" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="436" y="306" font-size="10.5" fill="#6e6e73" text-anchor="middle">1st</text>
+
+  <rect x="456" y="280" width="118" height="72" rx="8" fill="#eef1f5" stroke="#5b6b82"/>
+  <text x="515" y="298" font-size="12.5" font-weight="700" fill="#3f4b5c" text-anchor="middle">Budget HBH</text>
+  <rect x="468" y="306" width="94" height="10" rx="3" fill="#c9d1dc"/>
+  <rect x="468" y="320" width="94" height="10" rx="3" fill="#c9d1dc"/>
+  <rect x="468" y="334" width="94" height="10" rx="3" fill="#c9d1dc"/>
+
+  <line x1="578" y1="315" x2="614" y2="315" stroke="#8a8a8e" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="596" y="306" font-size="10.5" fill="#6e6e73" text-anchor="middle">2nd</text>
+
+  <rect x="618" y="280" width="122" height="72" rx="8" fill="#eef2ff" stroke="#2f4bd6"/>
+  <text x="679" y="298" font-size="12.5" font-weight="700" fill="#2f4bd6" text-anchor="middle">Quote HBH</text>
+  <rect x="630" y="306" width="98" height="10" rx="3" fill="#c3cdf5"/>
+  <rect x="630" y="320" width="98" height="10" rx="3" fill="#c3cdf5"/>
+  <rect x="630" y="334" width="98" height="10" rx="3" fill="#c3cdf5"/>
+
+  <line x1="20" y1="376" x2="740" y2="376" stroke="#f0f0f2"/>
+
+  <!-- ============ STEP 4 ============ -->
+  <circle cx="44" cy="410" r="16" fill="#1d1d1f"/>
+  <text x="44" y="415" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+  <text x="74" y="408" font-size="15" font-weight="700" fill="#1d1d1f">Associated Costs, twice</text>
+  <text x="74" y="428" font-size="12.5" fill="#555">Costs that are not in the HBH</text>
+  <text x="74" y="445" font-size="12.5" fill="#555">(prep days, essentials, staffing...),</text>
+  <text x="74" y="462" font-size="12.5" fill="#555">one set for each version.</text>
+
+  <rect x="340" y="414" width="108" height="40" rx="8" fill="#fff6e6" stroke="#e0a84a"/>
+  <text x="394" y="431" font-size="11.5" font-weight="600" fill="#8a5a00" text-anchor="middle">Associated</text>
+  <text x="394" y="446" font-size="11.5" font-weight="600" fill="#8a5a00" text-anchor="middle">Costs CSV</text>
+
+  <path d="M452,434 H480 V412 H510" fill="none" stroke="#8a8a8e" stroke-width="1.5" marker-end="url(#arr)"/>
+  <path d="M480,434 V458 H510" fill="none" stroke="#8a8a8e" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="514" y="394" width="226" height="36" rx="8" fill="#eef1f5" stroke="#5b6b82"/>
+  <text x="627" y="417" font-size="12.5" font-weight="700" fill="#3f4b5c" text-anchor="middle">Budget · Associated Costs</text>
+  <rect x="514" y="440" width="226" height="36" rx="8" fill="#eef2ff" stroke="#2f4bd6"/>
+  <text x="627" y="463" font-size="12.5" font-weight="700" fill="#2f4bd6" text-anchor="middle">Quote · Associated Costs</text>
+
+  <text x="20" y="504" font-size="12" fill="#6e6e73">Each step needs the one before it: Step 3 puts blocks on the days from Step 2, inside the versions from Step 1.</text>
+</svg>

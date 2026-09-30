@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="360" viewBox="0 0 760 360" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8a8a8e"/>
+    </marker>
+    <marker id="arrb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2f4bd6"/>
+    </marker>
+  </defs>
+  <rect x="0.5" y="0.5" width="759" height="359" rx="12" fill="#ffffff" stroke="#e5e5e7"/>
+  <text x="20" y="32" font-size="15" font-weight="700" fill="#1d1d1f">From forecast to quoted cost</text>
+  <text x="20" y="52" font-size="12" fill="#6e6e73">Example: Hotel · Per Person · Quote version with 28 people · vendor replies in Costa Rican colones</text>
+
+  <!-- Inputs -->
+  <rect x="20" y="70" width="150" height="40" rx="8" fill="#ffffff" stroke="#c7c7cc"/>
+  <text x="32" y="86" font-size="11" fill="#6e6e73">Unit Cost USD</text>
+  <text x="32" y="102" font-size="13" font-weight="700" fill="#1d1d1f">$60</text>
+  <rect x="20" y="118" width="150" height="40" rx="8" fill="#ffffff" stroke="#c7c7cc"/>
+  <text x="32" y="134" font-size="11" fill="#6e6e73">Cost Basis</text>
+  <text x="32" y="150" font-size="13" font-weight="700" fill="#1d1d1f">Per Person</text>
+  <rect x="20" y="166" width="150" height="40" rx="8" fill="#ffffff" stroke="#c7c7cc"/>
+  <text x="32" y="182" font-size="11" fill="#6e6e73">Quote version</text>
+  <text x="32" y="198" font-size="13" font-weight="700" fill="#1d1d1f">28 people</text>
+
+  <!-- bracket into forecast -->
+  <path d="M174,90 H186 V186 H174" fill="none" stroke="#8a8a8e" stroke-width="1.5"/>
+  <line x1="186" y1="138" x2="212" y2="138" stroke="#8a8a8e" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Forecast -->
+  <rect x="216" y="94" width="220" height="88" rx="10" fill="#f5f5f7" stroke="#8a8a8e"/>
+  <text x="230" y="114" font-size="10.5" font-weight="700" letter-spacing="0.08em" fill="#6e6e73">AUTOMATIC · THE PREDICTION</text>
+  <text x="230" y="136" font-size="14" font-weight="700" fill="#1d1d1f">Total Forecast Cost USD</text>
+  <text x="230" y="164" font-size="18" font-weight="700" fill="#1d1d1f">$60 × 28 = $1,680</text>
+
+  <!-- Forecast -> Quoted -->
+  <line x1="440" y1="138" x2="512" y2="138" stroke="#8a8a8e" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="476" y="128" font-size="11" fill="#6e6e73" text-anchor="middle">vendor</text>
+  <text x="476" y="156" font-size="11" fill="#6e6e73" text-anchor="middle">replies</text>
+
+  <!-- Quoted -->
+  <rect x="516" y="94" width="224" height="88" rx="10" fill="#eef2ff" stroke="#2f4bd6" stroke-width="1.5"/>
+  <text x="530" y="114" font-size="10.5" font-weight="700" letter-spacing="0.08em" fill="#2f4bd6">YOU TYPE IT · THE REAL PRICE</text>
+  <text x="530" y="136" font-size="14" font-weight="700" fill="#1d1d1f">Quoted Total Cost USD</text>
+  <text x="530" y="164" font-size="18" font-weight="700" fill="#2f4bd6">$1,750</text>
+
+  <!-- Local currency row -->
+  <rect x="20" y="238" width="190" height="80" rx="10" fill="#eef2ff" stroke="#2f4bd6" stroke-width="1.5"/>
+  <text x="34" y="258" font-size="10.5" font-weight="700" letter-spacing="0.08em" fill="#2f4bd6">YOU TYPE IT</text>
+  <text x="34" y="278" font-size="14" font-weight="700" fill="#1d1d1f">Local Amount</text>
+  <text x="34" y="304" font-size="16" font-weight="700" fill="#2f4bd6">₡892,500</text>
+
+  <line x1="214" y1="278" x2="282" y2="278" stroke="#8a8a8e" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="248" y="268" font-size="11" fill="#6e6e73" text-anchor="middle">÷ 510</text>
+  <text x="248" y="296" font-size="10" fill="#6e6e73" text-anchor="middle">₡ per $1</text>
+
+  <rect x="286" y="238" width="210" height="80" rx="10" fill="#f5f5f7" stroke="#8a8a8e"/>
+  <text x="300" y="258" font-size="10.5" font-weight="700" letter-spacing="0.08em" fill="#6e6e73">AUTOMATIC</text>
+  <text x="300" y="278" font-size="14" font-weight="700" fill="#1d1d1f">Local Amount to USD</text>
+  <text x="300" y="304" font-size="16" font-weight="700" fill="#1d1d1f">$1,750</text>
+
+  <!-- copy up into Quoted -->
+  <path d="M500,278 H628 V186" fill="none" stroke="#2f4bd6" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arrb)"/>
+  <text x="640" y="252" font-size="12" font-weight="700" fill="#2f4bd6">copy it in</text>
+  <text x="640" y="268" font-size="12" font-weight="700" fill="#2f4bd6">yourself</text>
+  <text x="640" y="284" font-size="11" fill="#6e6e73">(it does not fill</text>
+  <text x="640" y="298" font-size="11" fill="#6e6e73">in on its own)</text>
+
+  <text x="20" y="344" font-size="12" fill="#6e6e73"><tspan fill="#2f4bd6" font-weight="700">Blue</tspan> = you fill it in.   <tspan fill="#1d1d1f" font-weight="700">Gray</tspan> = Airtable calculates it.   <tspan fill="#1d1d1f" font-weight="700">White</tspan> = already set (from the I&amp;B or the version).</text>
+</svg>

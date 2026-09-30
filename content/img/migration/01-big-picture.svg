@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="300" viewBox="0 0 760 300" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8a8a8e"/>
+    </marker>
+  </defs>
+  <rect x="0.5" y="0.5" width="759" height="299" rx="12" fill="#ffffff" stroke="#e5e5e7"/>
+  <text x="20" y="32" font-size="15" font-weight="700" fill="#1d1d1f">The life of a program</text>
+
+  <!-- Box 1: I&B Sheet -->
+  <rect x="20" y="52" width="158" height="150" rx="10" fill="#fff6e6" stroke="#e0a84a"/>
+  <text x="34" y="76" font-size="11" font-weight="700" letter-spacing="0.08em" fill="#8a5a00">BEFORE APPROVAL</text>
+  <text x="34" y="100" font-size="15" font-weight="700" fill="#1d1d1f">I&amp;B Google Sheet</text>
+  <text x="34" y="126" font-size="12.5" fill="#555">Formulas react to</text>
+  <text x="34" y="144" font-size="12.5" fill="#555">changes in people,</text>
+  <text x="34" y="162" font-size="12.5" fill="#555">dates and prices.</text>
+
+  <line x1="182" y1="127" x2="200" y2="127" stroke="#8a8a8e" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Box 2: Migration -->
+  <rect x="204" y="52" width="150" height="150" rx="10" fill="#f5f5f7" stroke="#c7c7cc"/>
+  <text x="218" y="76" font-size="11" font-weight="700" letter-spacing="0.08em" fill="#6e6e73">APPROVED</text>
+  <text x="218" y="100" font-size="15" font-weight="700" fill="#1d1d1f">Migration</text>
+  <text x="218" y="126" font-size="12.5" fill="#555">Click Steps 1 → 4</text>
+  <text x="218" y="144" font-size="12.5" fill="#555">on the I&amp;B record.</text>
+  <text x="218" y="170" font-size="12.5" fill="#555">The I&amp;B is frozen</text>
+  <text x="218" y="188" font-size="12.5" fill="#555">into the Budget.</text>
+
+  <line x1="358" y1="127" x2="376" y2="127" stroke="#8a8a8e" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Box 3: Program -->
+  <rect x="380" y="52" width="182" height="150" rx="10" fill="#f5f5f7" stroke="#c7c7cc"/>
+  <text x="394" y="76" font-size="11" font-weight="700" letter-spacing="0.08em" fill="#6e6e73">PROGRAM</text>
+  <text x="394" y="100" font-size="15" font-weight="700" fill="#1d1d1f">In Airtable</text>
+  <rect x="394" y="114" width="154" height="30" rx="15" fill="#eef1f5" stroke="#5b6b82"/>
+  <text x="471" y="134" font-size="12.5" font-weight="600" fill="#3f4b5c" text-anchor="middle">Budget · frozen</text>
+  <rect x="394" y="154" width="154" height="30" rx="15" fill="#eef2ff" stroke="#2f4bd6"/>
+  <text x="471" y="174" font-size="12.5" font-weight="600" fill="#2f4bd6" text-anchor="middle">Quote · you work here</text>
+
+  <line x1="566" y1="127" x2="584" y2="127" stroke="#8a8a8e" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Box 4: Closing -->
+  <rect x="588" y="52" width="152" height="150" rx="10" fill="#f5f5f7" stroke="#c7c7cc"/>
+  <text x="602" y="76" font-size="11" font-weight="700" letter-spacing="0.08em" fill="#6e6e73">AFTER THE TRIP</text>
+  <text x="602" y="100" font-size="15" font-weight="700" fill="#1d1d1f">Closing</text>
+  <rect x="602" y="114" width="124" height="30" rx="15" fill="#e8f5ee" stroke="#1f8a5b"/>
+  <text x="664" y="134" font-size="12.5" font-weight="600" fill="#1f6e4a" text-anchor="middle">Execution</text>
+  <text x="602" y="170" font-size="12.5" fill="#555">Real amounts from</text>
+  <text x="602" y="188" font-size="12.5" fill="#555">reconciled expenses.</text>
+
+  <!-- Source of truth band -->
+  <text x="20" y="234" font-size="12" font-weight="700" fill="#6e6e73">WHO IS THE SOURCE OF TRUTH?</text>
+  <rect x="20" y="246" width="256" height="34" rx="8" fill="#fff6e6" stroke="#e0a84a"/>
+  <text x="148" y="268" font-size="13" font-weight="600" fill="#8a5a00" text-anchor="middle">The I&amp;B Sheet</text>
+  <rect x="282" y="246" width="458" height="34" rx="8" fill="#eef2ff" stroke="#2f4bd6"/>
+  <text x="511" y="268" font-size="13" font-weight="600" fill="#2f4bd6" text-anchor="middle">The Program (its Quote version HBH)</text>
+  <line x1="279" y1="206" x2="279" y2="286" stroke="#1d1d1f" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="286" y="222" font-size="11.5" font-style="italic" fill="#1d1d1f">the switch happens here</text>
+</svg>

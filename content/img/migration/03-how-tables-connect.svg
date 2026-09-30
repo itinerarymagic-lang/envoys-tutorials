@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="470" viewBox="0 0 760 470" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <rect x="0.5" y="0.5" width="759" height="469" rx="12" fill="#ffffff" stroke="#e5e5e7"/>
+  <text x="20" y="32" font-size="15" font-weight="700" fill="#1d1d1f">How the tables connect</text>
+
+  <!-- Program -->
+  <rect x="280" y="50" width="200" height="56" rx="10" fill="#f5f5f7" stroke="#1d1d1f"/>
+  <text x="380" y="74" font-size="15" font-weight="700" fill="#1d1d1f" text-anchor="middle">Program</text>
+  <text x="380" y="94" font-size="11.5" fill="#6e6e73" text-anchor="middle">SOT: 20 students · 2 faculty · 2 staff</text>
+
+  <!-- Program -> versions -->
+  <path d="M380,106 V128 H140 V150" fill="none" stroke="#8a8a8e" stroke-width="1.5"/>
+  <path d="M380,128 V150" fill="none" stroke="#8a8a8e" stroke-width="1.5"/>
+  <path d="M380,128 H620 V150" fill="none" stroke="#8a8a8e" stroke-width="1.5"/>
+  <text x="390" y="121" font-size="11" fill="#6e6e73">Program Versions</text>
+
+  <!-- Budget version -->
+  <rect x="30" y="150" width="220" height="74" rx="10" fill="#eef1f5" stroke="#5b6b82"/>
+  <text x="44" y="174" font-size="14" font-weight="700" fill="#3f4b5c">Budget version</text>
+  <text x="44" y="194" font-size="11.5" fill="#3f4b5c">20 students · 2 faculty · 2 staff</text>
+  <text x="44" y="213" font-size="11.5" font-style="italic" fill="#6e6e73">frozen photo of the I&amp;B</text>
+
+  <!-- Quote version -->
+  <rect x="270" y="150" width="220" height="74" rx="10" fill="#eef2ff" stroke="#2f4bd6" stroke-width="1.5"/>
+  <text x="284" y="174" font-size="14" font-weight="700" fill="#2f4bd6">Quote version</text>
+  <text x="284" y="194" font-size="11.5" fill="#2f4bd6">24 students · 2 faculty · 2 staff</text>
+  <text x="284" y="213" font-size="11.5" font-style="italic" fill="#6e6e73">live: OPS works here</text>
+
+  <!-- Execution version -->
+  <rect x="510" y="150" width="220" height="74" rx="10" fill="#e8f5ee" stroke="#1f8a5b" stroke-dasharray="5 4"/>
+  <text x="524" y="174" font-size="14" font-weight="700" fill="#1f6e4a">Execution version</text>
+  <text x="524" y="194" font-size="11.5" fill="#1f6e4a">created at Closing</text>
+  <text x="524" y="213" font-size="11.5" font-style="italic" fill="#6e6e73">what we actually spent</text>
+
+  <!-- version -> children -->
+  <path d="M140,224 V240 H87 V256" fill="none" stroke="#8a8a8e" stroke-width="1.5"/>
+  <path d="M140,240 H197 V256" fill="none" stroke="#8a8a8e" stroke-width="1.5"/>
+  <path d="M380,224 V240 H327 V256" fill="none" stroke="#8a8a8e" stroke-width="1.5"/>
+  <path d="M380,240 H437 V256" fill="none" stroke="#8a8a8e" stroke-width="1.5"/>
+  <path d="M620,224 V256" fill="none" stroke="#8a8a8e" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+  <!-- Budget children -->
+  <rect x="30" y="256" width="106" height="50" rx="8" fill="#ffffff" stroke="#5b6b82"/>
+  <text x="83" y="277" font-size="12.5" font-weight="700" fill="#3f4b5c" text-anchor="middle">HBH Blocks</text>
+  <text x="83" y="294" font-size="11" fill="#6e6e73" text-anchor="middle">Budget</text>
+  <rect x="144" y="256" width="106" height="50" rx="8" fill="#ffffff" stroke="#5b6b82"/>
+  <text x="197" y="277" font-size="12.5" font-weight="700" fill="#3f4b5c" text-anchor="middle">Assoc. Costs</text>
+  <text x="197" y="294" font-size="11" fill="#6e6e73" text-anchor="middle">Budget</text>
+
+  <!-- Quote children -->
+  <rect x="270" y="256" width="106" height="50" rx="8" fill="#ffffff" stroke="#2f4bd6"/>
+  <text x="323" y="277" font-size="12.5" font-weight="700" fill="#2f4bd6" text-anchor="middle">HBH Blocks</text>
+  <text x="323" y="294" font-size="11" fill="#6e6e73" text-anchor="middle">Quote</text>
+  <rect x="384" y="256" width="106" height="50" rx="8" fill="#ffffff" stroke="#2f4bd6"/>
+  <text x="437" y="277" font-size="12.5" font-weight="700" fill="#2f4bd6" text-anchor="middle">Assoc. Costs</text>
+  <text x="437" y="294" font-size="11" fill="#6e6e73" text-anchor="middle">Quote</text>
+
+  <!-- Execution child -->
+  <rect x="510" y="256" width="220" height="50" rx="8" fill="#ffffff" stroke="#1f8a5b" stroke-dasharray="5 4"/>
+  <text x="620" y="277" font-size="12.5" font-weight="700" fill="#1f6e4a" text-anchor="middle">Real amounts from</text>
+  <text x="620" y="294" font-size="11" fill="#6e6e73" text-anchor="middle">reconciled expenses on the Program</text>
+
+  <!-- blocks -> days -->
+  <path d="M83,306 V360" fill="none" stroke="#8a8a8e" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <path d="M323,306 V360" fill="none" stroke="#8a8a8e" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="92" y="338" font-size="11" font-style="italic" fill="#6e6e73">each block sits on a day</text>
+  <text x="332" y="338" font-size="11" font-style="italic" fill="#6e6e73">each block sits on a day</text>
+
+  <!-- HBH Days -->
+  <rect x="30" y="360" width="460" height="54" rx="10" fill="#f5f5f7" stroke="#c7c7cc"/>
+  <text x="44" y="382" font-size="13.5" font-weight="700" fill="#1d1d1f">HBH Days</text>
+  <text x="44" y="401" font-size="11.5" fill="#6e6e73">One set per Program (from Step 2). Budget and Quote blocks share them.</text>
+  <g font-size="11" text-anchor="middle" fill="#1d1d1f">
+    <rect x="510" y="368" width="52" height="38" rx="6" fill="#f5f5f7" stroke="#c7c7cc"/>
+    <text x="536" y="391">Day 1</text>
+    <rect x="568" y="368" width="52" height="38" rx="6" fill="#f5f5f7" stroke="#c7c7cc"/>
+    <text x="594" y="391">Day 2</text>
+    <rect x="626" y="368" width="52" height="38" rx="6" fill="#f5f5f7" stroke="#c7c7cc"/>
+    <text x="652" y="391">Day 3</text>
+    <text x="704" y="391" fill="#6e6e73">...</text>
+  </g>
+
+  <text x="20" y="446" font-size="12" fill="#1d1d1f"><tspan font-weight="700">Rule:</tspan> every HBH Block and every Associated Cost is linked to exactly one version.</text>
+</svg>
