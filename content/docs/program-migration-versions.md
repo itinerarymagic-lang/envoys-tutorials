@@ -25,29 +25,29 @@ The Sheet runs on formulas, so it reacts to changes:
 - Change the dates → the days move.
 - Change a unit price → the totals follow.
 
-Think of it as a draft written in pencil. You can erase and redraw as much as you need while the school decides.
+It is dynamic, meaning it will adapt certain elements based on connected inputs but also it is where we have the greatest degree of freedom. We can modify cells to react in any way we want based on the formulas and references we determine. 
 
 ---
 
-## Migration: when the pencil becomes pen
+## Migration: From I&B to Airtable
 
-When the proposal is approved, the I&B is migrated into Airtable. This is the exact moment the I&B **stops** being the source of truth and the **Program** takes over.
+When the proposal is approved, the I&B is migrated into Airtable. This is the exact moment the I&B **stops** being the source of truth and the **Program** takes over. Although we loose certain degree of freedom from Google Sheets file type, we optimize for many other tasks.
 
 After migration, changes you make in the Sheet do **not** reach Airtable. From here on, the itinerary lives in the Program.
 
-> **Only migrate when the I&B is ready.** The Budget Version is a photo of the I&B at the moment of migration. Migrate a half-finished I&B and you freeze a half-finished budget, and every financial comparison after that will be wrong.
+> **Only migrate when the I&B is ready.** The Budget Version is a photo of the I&B at the moment of migration. Migrate a half-finished I&B and you freeze a half-finished budget, and every financial comparison after that will be wrong. This will imply to use the HBH Resubmission or delete and re-migrate. If you did any work on the HBH in Airtable, this progress will be lost.
 
 ---
 
 ## What are Versions?
 
-A **Version** is one set of the program's costs, kept for a specific purpose.
+A **Version** is one set of the program's elements, kept for a specific purpose.
 
 | Version | Think of it as | It answers | Who works on it |
 |---|---|---|---|
 | **Budget** | The photo | What did we plan to spend when we sold the program? | Nobody. It stays frozen. |
-| **Quote** | The live plan | What do we expect to spend now, with real bookings and real vendor prices? | **OPS. This is where you work.** |
-| **Execution** | The receipt | What did we actually spend? | Created at Closing, from reconciled expenses. |
+| **Quote** | The live plan | What do we expect to spend, and what we actually will spend with real bookings and real vendor prices? Even after modifications to our itinerary! | **OPS. This is where you work.** |
+| **Execution** | The receipt | What did we actually spent out of our accounts from our credit cards and banks? | Created at Closing, from reconciled expenses. |
 
 ### The Version record is tiny
 
@@ -59,15 +59,17 @@ In the **Program Versions** table, each record only holds:
 - Number of **Faculty**
 - Number of **Staff**
 
-Every HBH Block and every Associated Cost is linked to **exactly one** version. That's how each version can have its own participant numbers. You can change the Quote version's numbers without touching the Budget (see *Two sets of participant numbers* below).
+Every **HBH Blocks (costs inside in our itinerary) and every Associated Costs (costs outside of our itinerary)** are linked to **exactly one** version. That's how each version can have its own participant numbers. You can change the Quote version's numbers without touching the Budget (see *Two sets of participant numbers* below).
 
 [![How the tables connect: Program, Versions, HBH Blocks, Associated Costs, HBH Days](content/img/migration/03-how-tables-connect.svg)](content/img/migration/03-how-tables-connect.svg)
 
 ### Why the versions are not exact copies
 
-In the old Envoys App, the versions had to be identical. That made it easy to compare them line by line, but it also meant **you couldn't change the itinerary.**
+First reason, in the old Envoys App, there was only one field for Students, other for Faculty, and other for Staff. That limited participant numbers to only one place, but it also meant **OPS couldn't change the participant numbers to recalculate budgets and forecasts for each line, as the numbers we do initial bookings are with the maximum number of participants.** 
 
-Real programs change all the time. The school asks for 3 new activities. A hotel on Day 2 falls through and you move the group to another town. If the versions had to match line for line, you couldn't make any of those changes.
+For example, EM expected a program to have 10 to 25 participants but sets the numbers to 10 in the old ENVOYS APP (8 students + 1 Faculty + 1 Staff), it won't tell me the budget for 25 people but the budget for 10, so each Total Cost Calculation for initial bookings has to be done manually. 
+
+Second reason, real programs change all the time. The school asks for 3 new activities. A hotel on Day 2 falls through and you move the group to another town. If the versions had to match line for line, you couldn't make any of those changes. They were locked in the App, so we had to hide them and put them in the last day. Made no sense. Now we can, and we can still compare costs by aggregated categories, not line by line. Then we can understand what changed and why it did.
 
 So the rules are:
 
@@ -164,7 +166,7 @@ Some costs aren't part of the day-by-day HBH, like preparation days, essentials 
 | Changes show on the HBH sent to the school and staff | No | **Yes** |
 | Source of truth for the itinerary | No | **Yes** |
 
-**Once a program is migrated, every HBH change happens in the Quote version.** The Budget is the photo of what we sold. We keep it untouched so we can measure how the real program compares to the plan.
+**Once a program is migrated, every HBH change happens in the Quote version.** The Budget is the photo of what we sold. We keep it untouched so we can measure how the real program compares to the plan. 
 
 ---
 
@@ -174,8 +176,8 @@ A Program has two kinds of participant numbers, and they are **not** linked on p
 
 | | SOT numbers | Version numbers |
 |---|---|---|
-| Where they live | On the Program | On each Program Version record |
-| What they mean | How many people we officially expect | How many people this version is priced for |
+| Where they live | On the Program record | On each Program Version record |
+| What they mean | How many people EM actually expect | How many people this version is priced for and used to calculate Forecast fields |
 | Do HBH costs use them? | No | **Yes**. Every HBH total is calculated from its version's numbers. |
 
 **Why keep them separate?** So OPS can play with the numbers without breaking anyone else's work.
@@ -280,16 +282,10 @@ Now each category can be compared across all three versions:
 No. Per Student and Per Person lines follow the version's numbers. Per Group lines, and Per Adult lines when the adult count hasn't changed, stay the same.
 
 **The school changed the itinerary. Where do I make the change?**
-In the **Quote** version's HBH. Never in the Budget, and not in the I&B Sheet, because the Sheet stopped being the source of truth at migration.
-
-**I see a mistake in the Budget version. Should I fix it?**
-No. Leave the Budget as it is and make changes in the Quote. The Budget records what we sold, and the gap between Budget and Quote is exactly what we want to measure.
+In the **Quote** version's HBH, which is what you have access to in the HBH Operational Stage Interface, don't worry about the rest as it is protected!. Never in the in the I&B Sheet, because the Sheet stopped being the source of truth at migration.
 
 **I typed the Local Amount but Quoted Total Cost USD is still the old number.**
 That's expected. Copy the value from **Local Amount to USD** into **Quoted Total Cost USD** yourself.
-
-**Can I click Step 3 before Step 2?**
-No. Step 3 places the HBH Blocks on the days Step 2 creates, inside the versions Step 1 creates. Always go 1 → 2 → 3 → 4.
 
 ---
 
