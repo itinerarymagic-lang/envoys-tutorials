@@ -121,7 +121,7 @@ Status is the single most important field on a request — it tells everyone whe
 |---|---|
 | **HBH Blocks CSV** | The staging CSV exported from the Staging sheet of the I&B Google Sheet. **Upload one file only** — more than one will break the import. |
 | **Essentials CSV** | The second staging export from the same Sheet. |
-| **Step 1–4 Complete?** | Checkboxes marking your progress through the build. Tick them as you go; they're how anyone else can see how far along a request is without asking you. |
+| **Step 1–4 Complete?** | Ticked automatically when each migration button (STEP 1–4) finishes. Don't tick or untick them by hand; the STEP 5 LOI email is triggered by Step 4 Complete?. See *From I&B to Program: Migration & Versions*. |
 
 ### After approval
 
@@ -175,7 +175,7 @@ Both calculated ranges are pulled back onto the I&B request itself, so OPS can s
 
 1. **Request arrives.** A record is created in I&B Requests. Status: *Request Received*.
 2. **OPS triggers the build.** OPS lead, builder, destination and due date are set. Status: *Itinerary & Budget Triggered*.
-3. **OPS builds** in the Itinerary & Budget Google Sheet, working through Steps 1 to 4 and ticking them off.
+3. **OPS builds** in the Itinerary & Budget Google Sheet.
 4. **Staging files come back to Airtable.** The HBH Blocks and Essentials CSVs are uploaded to the request.
 5. **Hand to Finance.** Ranges for Pricing and the target figures are filled in. Status: *Waiting for Pricing*.
 6. **Finance prices it** in the I&B Pricing Input interface, creating a tier for each range.
