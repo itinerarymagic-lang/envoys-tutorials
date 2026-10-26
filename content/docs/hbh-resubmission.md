@@ -7,7 +7,7 @@ Use it when:
 - The I&B version was changed after the program was migrated.
 - The wrong I&B version was used during migration.
 
-The process keeps the Program record, deletes everything else tied to that program's HBH (Days, Blocks, Versions and Costs), and rebuilds it from new CSV files exported from the correct I&B.
+The process keeps the Program record (title, POD Leads, dates, SOT numbers, etc), deletes everything else tied to that program's HBH (Days, Blocks, Versions and Costs), and rebuilds it from new CSV files exported from the correct I&B.
 
 ---
 
@@ -23,8 +23,8 @@ This includes the number of participants and the dates. If any of them differ, f
 
 You will also need two CSV files, both downloaded from the correct I&B sheet:
 
-1. The HBH CSV, from the HBH tab.
-2. The Associated Costs CSV, from the Travel Logistics tab.
+1. The HBH CSV, from the staging_hbh tab.
+2. The Associated Costs CSV, from the staging_associated_costs tab.
 
 Each file must be uploaded to its own matching section. Be careful not to upload the Associated Costs file in the HBH section, or the other way around.
 
