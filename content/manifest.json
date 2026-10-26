@@ -65,6 +65,10 @@
         {
           "id": "program-migration-versions",
           "title": "From I&B to Program: Migration & Versions"
+        },
+        {
+          "id": "hbh-resubmission",
+          "title": "HBH Resubmission: Fix or Update an HBH from a New I&B"
         }
       ]
     },
