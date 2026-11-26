@@ -32,8 +32,13 @@
     },
     {
       "name": "GLOBAL",
-      "status": "coming-soon",
-      "rows": []
+      "rows": [
+        {
+          "id": "reconciliation-app",
+          "title": "Reconciliation App",
+          "video": "https://drive.google.com/file/d/1LckzQ0vk9GoAcBlaOEUfeOw0KOfA7ufk/preview"
+        }
+      ]
     },
     {
       "name": "PT",
